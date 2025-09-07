@@ -19,3 +19,22 @@ body {
   min-height: 383px;
   background-repeat: no-repeat;
 }
+
+.catetories-btn button{
+  cursor: pointer;
+}
+.catetories-btn button:hover{
+  background-color: #15803D;
+  color: white;
+  transition: all .3s ease-in-out;
+}
+
+.total-price{
+  margin: auto;
+  width: 90%;
+  height: 1.5px;
+  background-color: #b6b6b6;
+  margin-bottom: 15px;
+}
+
+
