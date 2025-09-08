@@ -56,27 +56,33 @@
     <div class="banner mb-10">
       <div class="banner2 flex items-center">
         <div class="text-center w-full  space-y-5" >
-          <h1 class="text-[48px] font-bold">Plant a Tree, Grow a Future</h1>
+          <h1 class="text-[48px] font-bold lg:text-black sm:text-white ">Plant a Tree, Grow a Future</h1>
           <p>Join our mission to plant 1 million trees and make the Earth greener for<br> future generations.</p>
           <a class="btn rounded-[50px] text-[#15803D] bg-[#FACC15] border-none">Get Involved</a>  
         </div>
       </div>
     </div>
 
+
+
+
+
+
+
         <!-- Choose Your Trees Section start -->
     <div class="text-center">
       <h1 class="text-[32px] font-semibold p-9">Choose Your Trees</h1>
       <div class="container m-auto"> 
-        <div class="max-w-[1650px] flex justify-between gap-4">
+        <div class="max-w-[1650px] lg:flex justify-between gap-4">
 
           <!-- left Section start  -->
         <div class="left-side min-w-[250px]">
           <h1 class="text-[20px] font-semibold text-left p-[9px]">Categories</h1>
-          <div class="text-left space-y-1 catetories-btn">
-                  <button class="text-left text-[16px]  p-[9px] w-full bg-[#15803D] rounded-md text-white ">Add to Cart</button>
+          <button onclick="loadData()" class="text-left text-[16px]  p-[9px] w-full rounded-md text-gray-900">All Trees</button>
+          <div id="catetories-btn" class="text-left space-y-1 catetories-btn">
+                  <!-- <button class="text-left p-[9px] w-full rounded-md text-gray-900 ">Add to Cart</button>
                   <button class="text-left p-[9px] w-full rounded-md text-gray-900 ">Add to Cart</button>
-                  <button class="text-left p-[9px] w-full rounded-md text-gray-900 ">Add to Cart</button>
-                  <button class="text-left p-[9px] w-full rounded-md text-gray-900 ">Add to Cart</button>
+                  <button class="text-left p-[9px] w-full rounded-md text-gray-900 ">Add to Cart</button> -->
 
           </div>
         </div>
@@ -84,193 +90,16 @@
 
 
         <!-- Main content or Card section  -->
-        <!-- <div id="main-section" class="main-section grid grid-cols-3 gap-4">          -->
-        <div id="main-section">         
+        <div id="main-section" class="main-section grid lg:grid-cols-3 md:grid-cols-2 sm:gird-cols-1 gap-4">         
           
-          <!-- card Start  -->
-            <!-- <div class="card bg-base-100 shadow-sm">
-              <figure class="border-10 rounded-xl border-white w-full min-h-[200px] bg-[#EDEDED]">
-                <img class="rounded-xl w"
-                  src=""
-                  alt="Shoes" />
-              </figure>
-              <div class="p-5 space-y-3 text-left">
-                <h2 class="card-title ">
-                  Card Title
-                </h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div class="justify-between flex items-center">
-                  <span class="px-3 py-1 rounded-3xl bg-[#CFF0DC] text-[14px] font-medium text-[#15803D]" >Fruit Tree</span>
-                  <span class="text-[14px] font-semibold">৳ 500</span>
-                </div>
-                <div class="card-actions justify-center w-full">
-                  <button class="btn w-full bg-[#15803D] rounded-3xl text-white">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="card bg-base-100  shadow-sm">
-              <figure class="border-10 rounded-xl border-white w-full min-h-[200px] bg-[#EDEDED]">
-                <img class="rounded-xl w"
-                  src=""
-                  alt="Shoes" />
-              </figure>
-              <div class="card-body text-left">
-                <h2 class="card-title ">
-                  Card Title
-                </h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div class="justify-between flex items-center">
-                  <span class="px-3 py-1 rounded-3xl bg-[#CFF0DC] text-[14px] font-medium text-[#15803D]" >Fruit Tree</span>
-                  <span class="text-[14px] font-semibold">৳ 500</span>
-                </div>
-                <div class="card-actions justify-center w-full">
-                  <button class="btn w-full bg-[#15803D] rounded-3xl text-white">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="card bg-base-100 shadow-sm">
-              <figure class="border-10 rounded-xl border-white w-full min-h-[200px] bg-[#EDEDED]">
-                <img class="rounded-xl w"
-                  src=""
-                  alt="Shoes" />
-              </figure>
-              <div class="p-5 space-y-3 text-left">
-                <h2 class="card-title ">
-                  Card Title
-                </h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div class="justify-between flex items-center">
-                  <span class="px-3 py-1 rounded-3xl bg-[#CFF0DC] text-[14px] font-medium text-[#15803D]" >Fruit Tree</span>
-                  <span class="text-[14px] font-semibold">৳ 500</span>
-                </div>
-                <div class="card-actions justify-center w-full">
-                  <button class="btn w-full bg-[#15803D] rounded-3xl text-white">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="card bg-base-100  shadow-sm">
-              <figure class="border-10 rounded-xl border-white w-full min-h-[200px] bg-[#EDEDED]">
-                <img class="rounded-xl w"
-                  src=""
-                  alt="Shoes" />
-              </figure>
-              <div class="card-body text-left">
-                <h2 class="card-title ">
-                  Card Title
-                </h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div class="justify-between flex items-center">
-                  <span class="px-3 py-1 rounded-3xl bg-[#CFF0DC] text-[14px] font-medium text-[#15803D]" >Fruit Tree</span>
-                  <span class="text-[14px] font-semibold">৳ 500</span>
-                </div>
-                <div class="card-actions justify-center w-full">
-                  <button class="btn w-full bg-[#15803D] rounded-3xl text-white">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="card bg-base-100 shadow-sm">
-              <figure class="border-10 rounded-xl border-white w-full min-h-[200px] bg-[#EDEDED]">
-                <img class="rounded-xl w"
-                  src=""
-                  alt="Shoes" />
-              </figure>
-              <div class="p-5 space-y-3 text-left">
-                <h2 class="card-title ">
-                  Card Title
-                </h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div class="justify-between flex items-center">
-                  <span class="px-3 py-1 rounded-3xl bg-[#CFF0DC] text-[14px] font-medium text-[#15803D]" >Fruit Tree</span>
-                  <span class="text-[14px] font-semibold">৳ 500</span>
-                </div>
-                <div class="card-actions justify-center w-full">
-                  <button class="btn w-full bg-[#15803D] rounded-3xl text-white">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="card bg-base-100  shadow-sm">
-              <figure class="border-10 rounded-xl border-white w-full min-h-[200px] bg-[#EDEDED]">
-                <img class="rounded-xl w"
-                  src=""
-                  alt="Shoes" />
-              </figure>
-              <div class="card-body text-left">
-                <h2 class="card-title ">
-                  Card Title
-                </h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div class="justify-between flex items-center">
-                  <span class="px-3 py-1 rounded-3xl bg-[#CFF0DC] text-[14px] font-medium text-[#15803D]" >Fruit Tree</span>
-                  <span class="text-[14px] font-semibold">৳ 500</span>
-                </div>
-                <div class="card-actions justify-center w-full">
-                  <button class="btn w-full bg-[#15803D] rounded-3xl text-white">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="card bg-base-100 shadow-sm">
-              <figure class="border-10 rounded-xl border-white w-full min-h-[200px] bg-[#EDEDED]">
-                <img class="rounded-xl w"
-                  src=""
-                  alt="Shoes" />
-              </figure>
-              <div class="p-5 space-y-3 text-left">
-                <h2 class="card-title ">
-                  Card Title
-                </h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div class="justify-between flex items-center">
-                  <span class="px-3 py-1 rounded-3xl bg-[#CFF0DC] text-[14px] font-medium text-[#15803D]" >Fruit Tree</span>
-                  <span class="text-[14px] font-semibold">৳ 500</span>
-                </div>
-                <div class="card-actions justify-center w-full">
-                  <button class="btn w-full bg-[#15803D] rounded-3xl text-white">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="card bg-base-100  shadow-sm">
-              <figure class="border-10 rounded-xl border-white w-full min-h-[200px] bg-[#EDEDED]">
-                <img class="rounded-xl w"
-                  src=""
-                  alt="Shoes" />
-              </figure>
-              <div class="card-body text-left">
-                <h2 class="card-title ">
-                  Card Title
-                </h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div class="justify-between flex items-center">
-                  <span class="px-3 py-1 rounded-3xl bg-[#CFF0DC] text-[14px] font-medium text-[#15803D]" >Fruit Tree</span>
-                  <span class="text-[14px] font-semibold">৳ 500</span>
-                </div>
-                <div class="card-actions justify-center w-full">
-                  <button class="btn w-full bg-[#15803D] rounded-3xl text-white">Add to Cart</button>
-                </div>
-              </div>
-            </div> -->
-
-
-
-
         </div> 
 
 
         <!-- Right side bar start or Your Cart section -->
-        <div class="right-side min-w-[250px] rounded-xl bg-white ">
+        <div class="right-side pt-8 min-w-[250px] rounded-xl bg-white ">
           <h1 class="text-[20px] font-semibold text-left p-[9px]">Your Cart</h1>
-          <div class=" your-cart space-y-5">
-                  <div class="bg-[#CFF0DC] p-3 flex justify-between items-center m-2 rounded-lg">
+          <div id="all-cart" class=" your-cart space-y-5">
+                  <!-- <div class="bg-[#CFF0DC] p-3 flex justify-between items-center m-2 rounded-lg">
                     <div>
                       <h1>Tree Name</h1>
                       <p>৳<span> 500</span> x 1</p>
@@ -286,32 +115,40 @@
                     <div><i class="fa-solid fa-xmark"></i></div>
                   </div>
 
-                   <div class="bg-[#CFF0DC] p-3 flex justify-between items-center m-2 rounded-lg">
+                   <div class="bg-[#CFF0DC] p-3 flex justify-between items-center m-2 rounded-lg ">
                     <div>
                       <h1>Tree Name</h1>
                       <p>৳<span> 500</span> x 1</p>
                     </div>
                     <div><i class="fa-solid fa-xmark"></i></div>
-                  </div>
+                  </div> -->
 
-                  <br>
-                  <div class=" total-price "></div>
-                    <div class="flex justify-between px-5" >
-                      <h2>Total:</h2>
-                      <h2>৳ <span>1500</span></h2>
-                    </div>
-                  
 
 
           </div>
+
+          <br>
+
+            <div class=" total-price "></div>
+            <div class="flex justify-between px-5" >
+              <h2>Total:</h2>
+              <h2>৳ <span id="total-price">0</span></h2>
+            </div>
+            
         </div>
-
-
+        
       </div>
       </div>
     </div>
 
 
+    <!-- Add modal section start  -->
+
+<dialog id="my_modal_4" class="modal ">
+  <div id="modal-box" class="modal-box w-11/12 h-9/10 max-w-2xl space-y-5">
+  
+  </div>
+</dialog>
 
 
 
@@ -324,7 +161,7 @@
     <div class="w-full flex items-center my-22">
       <div class="w-[1090px] m-auto justify-center ">
       <h1 class="text-[32px] my-12 text-center">About the Campaign</h1>
-      <div class="grid grid-cols-2  items-center ">
+      <div class="grid lg:grid-cols-2 md:grid-cols-1  items-center ">
         <div class="campaing-img ">
           <img src="./assets/about.png" alt="About Image">
         </div>
@@ -350,10 +187,10 @@
 
 
     <!-- Our Impact section start  -->
-    <div class="text-center justify-center flex w-full bg-[#CFF0DC]">
+    <div class="text-center justify-center  flex w-full bg-[#CFF0DC]">
           <div class="container text-center space-y-10 py-20">
               <h1 class="text-[32px] font-semibold ">Our Impact</h1>
-              <div class="grid-cols-3 grid gap-15">
+              <div class="lg:grid-cols-3 md:grid-cols-1  grid gap-15">
 
                 <div class="bg-white rounded-xl py-6 px-10">
                   <h1 class="text-[32px] text-[#15803D] ">500K+</h1>
@@ -396,10 +233,6 @@
      <footer class="h-[72px] bg-[#14532D] justify-center items-center flex text-white">
         <p>© 2025 Green Earth. All Rights Reserved.</p>
      </footer>
-
-
-
-    <h1>hello test <i class="fa-solid fa-xmark"></i></h1>
     <script src="index.js"></script>
 </body>
 </html>
