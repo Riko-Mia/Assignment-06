@@ -70,6 +70,7 @@
 
 
         <!-- Choose Your Trees Section start -->
+
     <div class="text-center">
       <h1 class="text-[32px] font-semibold p-9">Choose Your Trees</h1>
       <div class="container m-auto"> 
@@ -77,20 +78,24 @@
 
           <!-- left Section start  -->
         <div class="left-side min-w-[250px]">
-          <h1 class="text-[20px] font-semibold text-left p-[9px]">Categories</h1>
-          <button onclick="loadData()" class="text-left text-[16px]  p-[9px] w-full rounded-md text-gray-900">All Trees</button>
+          <span id="left-side-hidden" class="loading loading-bars loading-lg"></span>
+          <div id="left-side">
+            <h1 class="text-[20px] font-semibold text-left p-[9px]">Categories</h1>
+          <button onclick="loadData()" class="active all-trees cursor-pointer text-left text-[16px]  p-[9px] w-full rounded-md text-gray-900">All Trees</button>
           <div id="catetories-btn" class="text-left space-y-1 catetories-btn">
                   <!-- <button class="text-left p-[9px] w-full rounded-md text-gray-900 ">Add to Cart</button>
                   <button class="text-left p-[9px] w-full rounded-md text-gray-900 ">Add to Cart</button>
                   <button class="text-left p-[9px] w-full rounded-md text-gray-900 ">Add to Cart</button> -->
 
           </div>
+          </div>
         </div>
 
 
 
         <!-- Main content or Card section  -->
-        <div id="main-section" class="main-section grid lg:grid-cols-3 md:grid-cols-2 sm:gird-cols-1 gap-4">         
+         <span id="main-hidden" class="loading loading-bars loading-lg"></span>
+        <div id="main-section" class="main-section grid lg:grid-cols-3 md:grid-cols-2 sm:gird-cols-1 sm:mx-10 lg:mx-1 md:mx-1 gap-4">         
           
         </div> 
 
@@ -145,7 +150,7 @@
     <!-- Add modal section start  -->
 
 <dialog id="my_modal_4" class="modal ">
-  <div id="modal-box" class="modal-box w-11/12 h-9/10 max-w-2xl space-y-5">
+  <div id="modal-box" class="modal-box w-11/12 h-8/10 max-w-2xl space-y-4">
   
   </div>
 </dialog>
@@ -198,7 +203,7 @@
                 </div>
                 <div class="bg-white rounded-xl py-6 px-10">
                   <h1 class="text-[32px] text-[#15803D] ">500K+</h1>
-                  <p class="text-[16px] "></p>
+                  <p class="text-[16px] ">Trees Planted</p>
                 </div>
                 <div class="bg-white rounded-xl py-6 px-10">
                   <h1 class="text-[32px] text-[#15803D] ">500K+</h1>

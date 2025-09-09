@@ -18,12 +18,14 @@ body {
   background-position: right;
   min-height: 383px;
   background-repeat: no-repeat;
+  /* background-color: #ffffff2f; */
 }
 
 .catetories-btn button{
   cursor: pointer;
 }
-.catetories-btn button:hover{
+
+.all-trees:hover{
   background-color: #15803D;
   color: white;
   transition: all .3s ease-in-out;
@@ -43,3 +45,13 @@ body {
   border-radius: 5px;
 }
 
+
+
+.impact:hover {
+  color: white;
+  background-color: #15803D;
+}
+
+.showModalsImg{
+  object-fit: cover;
+}

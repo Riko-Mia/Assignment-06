@@ -1,19 +1,46 @@
-
+const cardId = document.getElementById('main-section')
 
 let cartData = []
 
 
 
 const loadData = () => {
+
+// if(loading){
+//         const addDiv = document.createElement("div")
+//         cardId.innerHTML = "";
+//         addDiv.innerHTML=`<span class="loading loading-bars loading-lg"></span>`
+//         console.log(addDiv)
+//         cardId.append(addDiv)
+//       }else{
+//         console.log('addDiv')
+//       }
+
     fetch("https://openapi.programming-hero.com/api/plants")
     .then((res) =>res.json())
-    .then((json) => displayCart(json.plants))
+    .then((json) => {
+      displayCart(json.plants)
+    })
+}
+
+const loading = (status,id1, id2)=>{
+  if(status === true){
+    document.getElementById(id1).classList.remove("hidden")
+    document.getElementById(id2).classList.add("hidden")
+    // document.getElementById('main-hidden').classList.remove("hidden")
+    // document.getElementById('main-section').classList.add("hidden")
+  } else{
+    document.getElementById(id2).classList.remove("hidden")
+    document.getElementById(id1).classList.add("hidden")
+    // document.getElementById('main-section').classList.remove("hidden")
+    // document.getElementById('main-hidden').classList.add("hidden")
+  }
 }
 
 
 
-const cardId = document.getElementById('main-section')
 const displayCart = (data) =>{
+  loading(true, "main-hidden", "main-section")
     cardId.innerHTML = "";
     
     for (let user of data){
@@ -50,56 +77,74 @@ const displayCart = (data) =>{
         // console.log(data)
         
     }
+    loading(false, "main-hidden", "main-section")
 
 }
 
 
+
+const categoriesBtns = document.getElementById('catetories-btn')
 
 
 const loadCategories = () => {
   fetch("https://openapi.programming-hero.com/api/categories")
     .then((res) =>res.json())
-    .then((json) => categories(json.categories))
-}
-
-
-const categoriesBtns = document.getElementById('catetories-btn')
-const categories = (btns)=> {
+    .then((json) => {
+      // categories(json.categories)
+      loading(true, "left-side-hidden", "left-side")
   categoriesBtns.innerHTML=''
 // console.log(btns)
-  for(let btn of btns){
+  for(let btn of json.categories){
       let categoriesDiv = document.createElement('div')
-      categoriesDiv.innerHTML = `<button  onclick="categoriesBtn(${btn.id})" class="text-left p-[9px] w-full rounded-md text-gray-900 ">${btn.category_name
+      categoriesDiv.innerHTML = `<button id="category-btn${btn.id}" onclick="categoriesBtn(${btn.id})" class=" all-trees text-left p-[9px] w-full rounded-md text-gray-900 ">${btn.category_name
 }</button>`
 
     // categoriesDiv.classList.add("active")
 
       categoriesBtns.appendChild(categoriesDiv)
+      loading(false, "left-side-hidden", "left-side")
 
   }
 
+    })
 }
 
 
 
-const categoriesBtn =(id) =>{
-    // categoriesDiv.classList.add("active")
-    // categoriesBtns.classList.add("active")
 
-  // console.log(id)
-  // let plants 
+
+
+const categoriesBtn =(id) =>{
+
+   const allCategoriesBtn = document.querySelectorAll(".all-trees")
+   
+for(let bt of allCategoriesBtn){
+  bt.classList.remove('active')
+}
+const allCategoriesIdBtn = document.querySelectorAll(`#category-btn${id}`)
+allCategoriesIdBtn[0].classList.add("active")
+
+
+
+
+
+
  fetch(`https://openapi.programming-hero.com/api/category/${id}`)
     .then((res) =>res.json())
     .then((json) => jsonFunc(json.plants))
 
 
-    cardId.innerHTML=''
+    // cardId.innerHTML=''
 
   const jsonFunc = (data)=>{
+    loading(true, "main-hidden", "main-section")
     
+     cardId.innerHTML=''
     for (let user of data){
+
+
+
       const addDiv = document.createElement("div")
-      // console.log(user.id, user.name, user.price)
       
       addDiv.innerHTML = `
           <div class="card bg-base-100 shadow-sm">
@@ -127,9 +172,8 @@ const categoriesBtn =(id) =>{
 
       
       cardId.append(addDiv);
+      loading(false, "main-hidden", "main-section")
 
-
-      // console.log(data)
   }
 }
 }
@@ -221,7 +265,7 @@ console.log(data)
 
       addDiv.innerHTML = `<div class=" space-y-5">
         <h3 class="text-lg font-bold ">${data.name}</h3>
-        <div class="rounded-3xl overflow-hidden max-h-[400px]"><img class="rounded-2xl w-full h-full object-cover "  src="${data.image}"></div>
+        <div class="rounded-3xl overflow-hidden max-h-[400px]"><img id="showModalsImg" class="rounded-2xl w-full max-h-[420px]"  src="${data.image}"></div>
         <p class="text-lg font-bold">Category:<span class="text-[16px] font-normal"> ${data.category}</span></p>
         <p class="text-lg font-bold">Price:<span class="text-[16px] font-normal"> ${data.price}</span></p>
         <p class="text-lg font-bold">Description:<span class="text-[16px] font-normal"> ${data.description}</span></p>
